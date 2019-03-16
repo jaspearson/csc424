@@ -15,7 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+from deals import views as deal_view
+from django.conf import settings
+from django.conf.urls.static import static
+from deals.views import search
 
 urlpatterns = [
+    url(r'^deal/(.*)$', deal_view.deal),
+    url(r'^$', deal_view.index),
     path('admin/', admin.site.urls),
-]
+    url(r'^search/$', search, name="search")
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
+              + static(settings.STATIC_URL, document_root=settings.STATIC_URL)

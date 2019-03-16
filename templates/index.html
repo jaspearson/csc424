@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+
+            {%  for deal in deals %}
+                <div class="col-md-4">
+                    <div class="card h-100" style="width: 15rem;">
+
+                        <div class="card-body h-100">
+                            <img src="{{ deal.image_url }}"/>
+                            <a href="{{ deal.url }}" target="_blank" ><h6>{{ deal.title }}</h6></a>
+                            <p class="card-text"> <b>Price: {{ deal.price }} </b></p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            {% endfor %}
+            </div>
+
+    </div>
+
+    {% csrf_token %}
+{% endblock %}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"">
+
+    <title>{% block title %} Dealio {% endblock %}</title>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-static-top " >
+       <nav class="navbar navbar navbar-expand-lg navbar-light bg-light" >
+
+                 <a class="navbar-brand" href="/">
+                    <img src="/static/images/dealio-icon.png" alt="test">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                 <form class="form-inline my-2 my-lg-0 mr-auto" method="GET" action="{% url 'search' %}">
+                     <input class="form-control mr-sm-2" type="search" placeholder="Type your search here..." aria-label="Search" name="Search" value="{{ request.GET.search }}">
+                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+                 </form>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+                </ul>
+              </div>
+       </nav>
+
+    </div>
+    <div class="container" id="main-content">
+        <div class="row">
+            <div class="col-lg-" id="filter-pane">
+
+                <div class ="card-body filter-container" id="price-container">
+                    <a data-toggle="collapse" href="#priceFilterCollapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                        <b>Price</b>
+                    </a>
+                    </br>
+                    <div class="collapse" id="priceFilterCollapse">
+                        <input class="form-check-input" type="checkbox" value="100" id="priceFilter1">
+                        <label class="form-check-label" for="priceFilter1">$0 - $100 </label>
+                        <br/>
+
+                        <input class="form-check-input" type="checkbox" value="200" id="priceFilter2">
+                        <label class="form-check-label" for="priceFilter2">$100 - $200 </label>
+                        <br />
+
+                        <input class="form-check-input" type="checkbox" value="250" id="priceFilter3">
+                        <label class="form-check-label" for="priceFilter3">$200 - $250 </label>
+                        <br/>
+
+                        <input class="form-check-input" type="checkbox" value="300" id="priceFilter4">
+                        <label class="form-check-label" for="priceFilter4">$250 - $300 </label>
+                        <br/>
+
+                        <input class="form-check-input" type="checkbox" value="350" id="priceFilter5">
+                        <label class="form-check-label" for="priceFilter5">$300 - $350 </label>
+                        <br/>
+
+                        <input class="form-check-input" type="checkbox" value="400" id="priceFilter6">
+                        <label class="form-check-label" for="priceFilter6">$350 - $400 </label>
+                        <br/>
+                    </div>
+                </div>
+                <div class ="card-body filter-container" id="store-container">
+                        <a data-toggle="collapse" href="#storeFilterCollapse" role="button" aria-expanded="true" aria-controls="collapseExample">
+                            <b>Stores</b>
+                        </a>
+                        </br>
+                        <div class="collapse" id="storeFilterCollapse">
+                            <input class="form-check-input" type="checkbox" value="Amazon" id="amazonFilter">
+                            <label class="form-check-label" for="amazonFilter">Amazon</label>
+                            <br/>
+
+                            <input class="form-check-input" type="checkbox" value="bestbuy" id="BestBuyFilter">
+                            <label class="form-check-label" for="BestBuyFilter">Best Buy </label>
+                            <br />
+
+                            <input class="form-check-input" type="checkbox" value="Target" id="targetFilter">
+                            <label class="form-check-label" for="priceFilter3">Target</label>
+                            <br/>
+
+                            <input class="form-check-input" type="checkbox" value="walmart" id="walmartFilter">
+                            <label class="form-check-label" for="walmartFilter">Wal-mart </label>
+                            <br/>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="col" id="content">
+
+                {% block content %}
+                    This is a fallback text.
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

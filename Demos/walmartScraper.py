@@ -60,7 +60,7 @@ class Walmart():
         products_table = soup.find("div", attrs={'id': 'searchProductResult'})
 
         # Get all product container divs
-        products = products_table.find_all("div", class_="search-result-gridview-item-wrapper arrange")
+        products = products_table.find_all("div", class_="search-result-gridview-item-wrapper")
 
         # Initialize a dictionary object
         extracted_records = []
@@ -72,14 +72,18 @@ class Walmart():
             title = product.find("a", class_="product-title-link")
             price = product.find("span", class_="price-group")
             url = product.find("a", class_="product-title-link")
+            image_container = product.find("div", class_="search-result-productimage gridview")
+            image_url = image_container.find("img", src=True)['src']
 
             if title != None and price != None and url != None:
 
                 print("%s - %s" % (title.text, price.text))
+
                 record = {
                     'title': title.text,
                     'price': price.text,
-                    'url': "http://walmart.com" + url.get("href")
+                    'url': "http://walmart.com" + url.get("href"),
+                    'image_url' : image_url
                 }
 
                 # Append each new product and attributes to the dictionary object

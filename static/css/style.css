@@ -1,0 +1,61 @@
+body {
+    background: #f00 !important;
+    color: red !important;
+}
+.h5 {
+    color: red !important;
+}
+
+.card-header{
+    width:100%;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+
+a.navbar-brand, .nav-link
+{
+    padding: unset;
+}
+
+
+.navbar
+{
+    width: 100%;
+}
+#navbarSupportedContent
+{
+    justify-content: flex-end;
+}
+#filter-pane
+{
+    //float: left;
+    //width: 20%;
+    //height: 100%;
+    border-right: 1px #ebe9e9 solid;
+    border-top: 1px #ebe9e9 solid;
+    border-bottom: 1px #ebe9e9 solid;
+    padding-right: 5px;
+
+}
+.filter-container
+{
+    width: 140px;
+}
+#content
+{
+    //width: 80%;
+    //float: left;
+    //height: 100%;
+    //border: 1px black solid;
+}
+#main-content
+{
+    //width: 80%;
+    //justify-content: center;
+    //border: 1px black solid;
+}
