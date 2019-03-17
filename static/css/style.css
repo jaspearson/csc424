@@ -1,9 +1,9 @@
 body {
-    background: #f00 !important;
+    background-color: #f00 !important;
     color: red !important;
 }
 .h5 {
-    color: red !important;
+    //color: red !important;
 }
 
 .card-header{

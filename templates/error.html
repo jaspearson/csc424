@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="container">
+    test error page
+        {%  for e in the_errors %}
+            {{ e.error }}
+        {% endfor %}
+
+    </div>
+
+    {% csrf_token %}
+{% endblock %}

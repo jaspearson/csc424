@@ -74,6 +74,7 @@ class Walmart():
             url = product.find("a", class_="product-title-link")
             image_container = product.find("div", class_="search-result-productimage gridview")
             image_url = image_container.find("img", src=True)['src']
+            store_icon = "images/walmart-icon.png"
 
             if title != None and price != None and url != None:
 
@@ -83,7 +84,8 @@ class Walmart():
                     'title': title.text,
                     'price': price.text,
                     'url': "http://walmart.com" + url.get("href"),
-                    'image_url' : image_url
+                    'image_url' : image_url,
+                    'store_icon': store_icon
                 }
 
                 # Append each new product and attributes to the dictionary object

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
     <div class="container">
@@ -15,7 +16,7 @@
                             <img src="{{ deal.image_url }}"/>
                             <a href="{{ deal.url }}" target="_blank" ><h6>{{ deal.title }}</h6></a>
                             <p class="card-text"> <b>Price: {{ deal.price }} </b></p>
-
+                            <img class="float-right" src= "{%  static deal.store_icon %}" style="width: 30px; height: 30px;"/>
                         </div>
 
 

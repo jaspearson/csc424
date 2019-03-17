@@ -17,13 +17,18 @@ def search(requests):
 		search_id = requests.GET.get('Search')
 		try:
 			results = Walmart().get_deals(search_id)
-			print("MJP TEST");
+			print("Search function occured with " + search_id + " as an input.");
 			# display the post.
 			html = ("<h1>%s</h1>", results);
 			return render(requests, 'search.html', {'deals': results})
-		except results.DoesNotExist:
-			return HttpResponse("No post meets your search criteria")
+		except :
+			return error(requests, ["No search results matched your criteria."])
+			#return error(requests, {"error": "No search results matched your criteria."})
 
 	else:
 
 		return render(requests, 'search.html')
+
+
+def error(requests, the_error):
+	return render(requests, 'error.html', {'error': the_error})
