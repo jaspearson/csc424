@@ -5,6 +5,7 @@
 * Django 2.1.7
 * Pycharm 2018.3.4
 
+
 ##Project Structure
 
 dealio
