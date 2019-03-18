@@ -20,14 +20,16 @@
        <nav class="navbar navbar navbar-expand-lg navbar-light bg-light" >
 
                  <a class="navbar-brand" href="/">
-                    <img src="/static/images/dealio-icon.png" alt="test">
+                    <img src="/static/images/dealio-icon.png" alt="Dealio Logo">
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                  <form class="form-inline my-2 my-lg-0 mr-auto" method="GET" action="{% url 'search' %}">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Type your search here..." aria-label="Search" name="Search" value="{{ request.GET.search }}">
-                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                     <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" name="Search" value="{{ request.GET.search }}">
+                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                         <img src="/static/images/search-icon.png" alt="Magnifying Glass Icon" style="width: 25px; height: 25px;">
+                     </button>
 
                  </form>
 
