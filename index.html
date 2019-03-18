@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Standard CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <!-- Bootstrap Standard JavaScript -->
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        input[type=search] {
+            text-align: center;
+            align-content: center;
+        }
+        
+        .card-footer, .card-body {
+            background-color: #343a40;
+            color: white;
+        }
+        
+        a.foot-links {
+            color: #343a40;
+        }
+        
+        a.foot-links:link {
+            color: #343a40;
+        }
+        
+        a.foot-links:hover {
+            color: #dc3545;   
+        }
+        
+        mark.red {
+            color: #dc3545;
+            background: none;
+            padding: none;
+        }
+        
+        .navbar-toggler:focus {
+            background-color: #343a40;
+        }
+        
+        .form-control:focus {
+            border-color: #343a40;
+            box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25);
+        };
+    </style>
+   
+    <title>What's the Dealio?</title>
+  </head>
+  <body>
+
+   
+   <!-- Nav bar min md down full lg up -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">LOGO HERE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-center">
+                <li>
+                    <form id="menu-search" class="form-inline my-2 my-lg-0 d-lg-none">
+                        <input class="form-control mr-sm-2" type="search" results=5 placeholder="What's the Dealio?">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hot Dealios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+            </ul>
+            <form id="nav-search" class="form-inline my-2 my-lg-0 d-none d-lg-block">
+                <input class="form-control mr-sm-2" type="search" results=6 placeholder="What's the Dealio?">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <!-- image carousel 6 items -->
+    <div id="carousel-base" class="container">
+        <div class="overlay d-block"><h3>Dealios for<mark class="red"> You</mark></h3></div><br/>
+        <div class="d-block justify-content-center">                                               
+            <div id="image-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#image-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#image-carousel" data-slide-to="1"></li>
+                    <li data-target="#image-carousel" data-slide-to="2"></li>
+                    <li data-target="#image-carousel" data-slide-to="3"></li>
+                    <li data-target="#image-carousel" data-slide-to="4"></li>
+                    <li data-target="#image-carousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="First Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Computers 50% Less than our competitors</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Second Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Lightbulbs super cheap I swear they are not broken</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/825258/pexels-photo-825258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Third Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Motherboards so inexpenisve you would think they are fried</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/712786/pexels-photo-712786.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Fourth Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Magic Zoom Glass not creepy at all</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Fifth Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Keyboard that makes life look like a photo filter</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Sixth Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Headsets but really who wants this crap</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#image-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#image-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <br/>
+    
+    <!-- hot deals cards 3-->
+    
+    <div id="card-table" class="container">
+        <div class="overlay d-flex"><h3>Featured<mark class="red"> Hot </mark>Dealios</h3></div><br/>
+        <div class="card-deck">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="First Hot Deal">
+                <div class="card-body">
+                    <h5 class="card-title">Cool Blue Stuff</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="Second Hot Deal">
+                <div class="card-body">
+                    <h5 class="card-title">A Lot of Red Things</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 6 days ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=1260" class="card-img-top" alt="Third Hot Deal">
+                <div class="card-body">
+                    <h5 class="card-title">Big Fancy Plates</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 9 weeks ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <br/><br/><br/>
+    
+    <footer class="container d-flex justify-content-center">
+        <div>
+            <p><a class="foot-links" href="#">About Us</a> | <a class="foot-links" href="#">Contact Us</a> | <a class="foot-links" href="#">Help</a> | <a class="foot-links" href="#">Privacy Policy</a> | <a class="foot-links" href="#">Terms of Service</a></p>
+        </div>
+    </footer>  
+          
+    </body>
+
+</html>
