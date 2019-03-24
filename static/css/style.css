@@ -59,3 +59,44 @@ a.navbar-brand, .nav-link
     //justify-content: center;
     //border: 1px black solid;
 }
+
+/* privacy_policy.html Styles */
+#centerDiv
+{
+    border: 2px black solid;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 18pt;
+    color: black;
+    padding: 1%;
+}
+.smallText
+{
+    font-size: 12pt;
+    text-align: left;
+}
+#textContainer
+{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+#Space
+{
+    background-color: white;
+    padding: 2px;
+}
+#footerDiv
+{
+    background-color: white;
+}
+#infoList
+{
+    font-size: 12pt;
+}
+#privacyConcern
+{
+    font-weight: bold;
+    font-size: 12pt;
+}
