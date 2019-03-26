@@ -100,3 +100,42 @@ a.navbar-brand, .nav-link
     font-weight: bold;
     font-size: 12pt;
 }
+
+/* below pulled from index.html by THobbs*/
+
+        input[type=search] {
+            text-align: center;
+            align-content: center;
+        }
+
+        .card-footer, .card-body {
+            background-color: #343a40;
+            color: white;
+        }
+
+        a.foot-links {
+            color: #343a40;
+        }
+
+        a.foot-links:link {
+            color: #343a40;
+        }
+
+        a.foot-links:hover {
+            color: #dc3545;
+        }
+
+        mark.red {
+            color: #dc3545;
+            background: none;
+            padding: none;
+        }
+
+        .navbar-toggler:focus {
+            background-color: #343a40;
+        }
+
+        .form-control:focus {
+            border-color: #343a40;
+            box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25);
+        }

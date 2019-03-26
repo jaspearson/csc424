@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Standard CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Bootstrap Standard JavaScript -->
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{% block title %} Dealio {% endblock %}</title>
+    <title>{% block title %}What's the Dealio?{% endblock %}</title>
 </head>
 <body>
-    <div class="navbar navbar-default navbar-static-top " >
-       <nav class="navbar navbar navbar-expand-lg navbar-light bg-light" >
+   <!-- Nav bar min md down full lg up -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger">
+        <div class= "rounded-pill" style="background-color:white">
+        <a class="navbar-brand" href = "images/dealio-icon.png">
+            <img src = "images/dealio-icon.png" alt = "Dealio Logo" style="width:100px;height:51px;">
+        </a>
+            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-center">
+                <li>
+                    <form id="menu-search" class="form-inline my-2 my-lg-0 d-lg-none">
+                        <input class="form-control mr-sm-2" type="search" results=5 placeholder="What's the Dealio?">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hot Dealios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+            </ul>
+            <form id="nav-search" class="form-inline my-2 my-lg-0 d-none d-lg-block">
+                <input class="form-control mr-sm-2" type="search" results=6 placeholder="What's the Dealio?">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+<!-- I'm guessing this is Jason's code, I didn't want to destroy it in case it needs to be used going forward, so just commented it out
 
-                 <a class="navbar-brand" href="/">
-                    <img src="/static/images/dealio-icon.png" alt="Dealio Logo">
-                  </a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="False" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                 <form class="form-inline my-2 my-lg-0 mr-auto" method="GET" action="{% url 'search' %}">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search" name="Search" value="{{ request.GET.search }}">
-                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                         <img src="/static/images/search-icon.png" alt="Magnifying Glass Icon" style="width: 25px; height: 25px;">
-                     </button>
-
-                 </form>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                  <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
-                </ul>
-              </div>
-       </nav>
-
-    </div>
     <div class="container" id="main-content">
         <div class="row">
             <div class="col-lg-" id="filter-pane">
@@ -105,11 +124,26 @@
 
             <div class="col" id="content">
 
-                {% block content %}
+                block was originally here
 
-                {% endblock %}
             </div>
         </div>
     </div>
-</body>
+
+   -->
+   <div id="content">
+       {%block content%}
+           This is a fallback text.
+       {%endblock%}
+    </div>
+
+
+    <footer class="container d-flex justify-content-center">
+        <div>
+            <p><a class="foot-links" href="#">About Us</a> | <a class="foot-links" href="#">Contact Us</a> | <a class="foot-links" href="help.html">Help</a> | <a class="foot-links" href="privacy_policy.html">Privacy Policy</a> | <a class="foot-links" href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    </body>
+
 </html>
