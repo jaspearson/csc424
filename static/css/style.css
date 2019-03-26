@@ -139,3 +139,12 @@ a.navbar-brand, .nav-link
             border-color: #343a40;
             box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25);
         }
+
+/* CSS for the Search.html */
+/* Overrides the above .card-footer, .card-body from thobs for the search page only
+    - jaspearson*/
+.search-card-body
+{
+    background-color: white;
+    color: black;
+}
