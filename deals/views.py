@@ -1,7 +1,7 @@
 from django.shortcuts import render, render_to_response, get_object_or_404
 from django.http import HttpResponse
 from deals.models import my_test
-from Demos.walmartScraper import Walmart
+from Classes.walmartScraper import Walmart
 
 # Create your views here.
 def index(request):

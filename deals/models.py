@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from Demos.walmartScraper import Walmart
+from Classes.walmartScraper import Walmart
 
 
 # Create your models here.
