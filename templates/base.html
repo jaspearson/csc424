@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +28,7 @@
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger">
         <div class= "rounded-pill" style="background-color:white">
         <a class="navbar-brand" href = "images/dealio-icon.png">
-            <img src = "images/dealio-icon.png" alt = "Dealio Logo" style="width:100px;height:51px;">
+            <img src = "{% static 'images/dealio-icon.png' %}" alt = "Dealio Logo" style="width:100px;height:51px;">
         </a>
             </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +55,8 @@
                     <a class="nav-link" href="#">Settings</a>
                 </li>
             </ul>
-            <form id="nav-search" class="form-inline my-2 my-lg-0 d-none d-lg-block">
-                <input class="form-control mr-sm-2" type="search" results=6 placeholder="What's the Dealio?">
+            <form id="nav-search" class="form-inline my-2 my-lg-0 d-none d-lg-block" method="GET" action="{% url 'search' %}">
+                <input class="form-control mr-sm-2" type="search" results=6 placeholder="What's the Dealio?" name="Search" value ="{{ request.GET.search }}">
                 <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
