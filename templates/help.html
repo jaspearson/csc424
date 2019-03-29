@@ -1,0 +1,46 @@
+{%extends 'base.html'}
+    {%block content%}
+    <div id="Space"></div>
+        <div id="textContainer">
+            <div id = "centerDiv" align = left>
+                <p>How do I navigate the What's the Dealio website?</p>
+                <div class = "smallText">
+                    <p>At the top of each webpage there is navigation bar that will take you to the different pages on What's the Dealio.</p>
+                </div>
+                <ul id="infoList" align = left>
+                    <li>"Home" will take you back to the main What's the Dealio page.</li>
+                    <li>"Hot Dealios" will take you to a page containing desirable/promoted deals.</li>
+                    <li>"Profile" will take you to the page where you can view and edit your profile.</li>
+                    <li>"Settings" will take you to a page where your search and deal preference settings can be edited.</li>
+                </ul>
+                <div class = "smallText">
+                    <p>At the bottom of the page there are links to take you to the support pages of the webpage.</p>
+                </div>
+                <ul id = "infoList" align = left>
+                    <li>"About Us" will take you to the page with information on What's the Dealio.</li>
+                    <li>"Contact Us" will take you to the page the information and ability to contact the What's the Dealio team.</li>
+                    <li>"Help" will take you to this page, that contains questions you may have.</li>
+                    <li>"Privacy Policy" will take you to a page containing What's the Dealio's privacy and security statements.</li>
+                    <li>"Terms of Service" will take you to the page containing the Terms of Service that were agreed upon when you make a What's the Dealio Account.</li>
+                </ul>
+                <p>How do I search for a product on What's the Dealio?</p>
+                <div class = "smallText">
+                    <p>To search for a product on What's the Dealio go to the top right hand corner of the screen and type in the search bar where the words "What's the Dealio" are there by default.  Once enter click the "search" button to the right of the search bar.</p>
+                </div>
+                <p>Why isn't X store showing up in my What's the Dealio Results?</p>
+                <div class = "smallText">
+                    <p>Currently the only online retailers supported in What's the Dealio are Amazon, Target, and Walmart.</p>
+                </div>
+                <p>How does What's the Dealio decide what is a deal?</p>
+                <div class = "smallText">
+                    <p>What's the Dealio uses a proprietary algorithm to analyze prices of the products you search for.</p>
+                </div>
+                <p>How do I get notified of new deals on a product that I am interested in?</p>
+                <div class = "smallText">
+                    <p>To be notified of deals on object you must create a What's the Dealio account.  Once you have an account you can search for a product, and star it to be notified if the price changes.</p>
+                </div>
+            </div>
+        </div>
+        <div id="Space"></div>
+        {% csrf_token %}
+    {% endblock %} 
