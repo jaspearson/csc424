@@ -1,12 +1,12 @@
 from django.shortcuts import render, render_to_response, get_object_or_404
 from django.http import HttpResponse
-from deals.models import my_test
+#from deals.models import my_test
 from Classes.walmartScraper import Walmart
 
 # Create your views here.
 def index(request):
-	deals = my_test
-	return render(request, 'index.html', {'deals': my_test})
+	#deals = my_test
+	return render(request, 'index.html', {})
 
 
 def deal(request):
@@ -22,7 +22,7 @@ def search(requests):
 			html = ("<h1>%s</h1>", results);
 			return render(requests, 'search.html', {'deals': results})
 		except :
-			return error(requests, ["No search results matched your criteria."])
+			return error(requests, {'error': 'No search results matched your criteria.'})
 			#return error(requests, {"error": "No search results matched your criteria."})
 
 	else:
@@ -31,4 +31,4 @@ def search(requests):
 
 
 def error(requests, the_error):
-	return render(requests, 'error.html', {'error': the_error})
+	return render(requests, 'error.html', the_error)
