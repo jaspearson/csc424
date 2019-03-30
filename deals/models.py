@@ -27,6 +27,7 @@ class Deal(models.Model):
 	price = models.DecimalField(max_digits=10, decimal_places=2)
 	featured_product = models.BooleanField(default=False)
 	store_id = models.IntegerField()
+	store_icon=models.CharField(max_length=50)
 	product_id = models.CharField(max_length=50, unique=True)
 
 	def get_absolute_url(self):
