@@ -21,7 +21,7 @@ def search(requests):
 
 			print("Search function occurred with " + search_id + " as an input.");
 
-			results = Deal.objects.filter(Q(title__icontains=search_id))
+			results = Deal.objects.filter(Q(title__icontains=search_id)).order_by('price')
 
 			if results.exists():
 				return render(requests, 'search.html', {'deals': results})
