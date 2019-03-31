@@ -93,9 +93,12 @@ class Staples():
 
 				record = {
 					'title': title.text,
-					'price': price.text.strip('$'),
+					# Strip the price of special characters so it can be converted to a Decimal later.
+					'price': price.text.strip('$').replace(',', ''),
+					'featured_product': False,
 					'url': actual_url,
 					'image_url': image_url,
+					'store_id': self.store_id,
 					'store_icon': store_icon,
 					'product_id': dealio_id
 				}
@@ -111,4 +114,4 @@ class Staples():
 
 
 # This line is used for testing purposes only.
-Staples().get_deals('iphone')
+#Staples().get_deals('iphone')

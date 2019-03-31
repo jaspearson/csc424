@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-from deals.models import Deal
-from decimal import *
+
 
 class Walmart():
 
@@ -76,28 +75,21 @@ class Walmart():
 
                 record = {
                     'title': title.text.strip('...'),
-                    'price': price.text,
+                    # Strip the price of special characters so it can be converted to a Decimal later.
+                    'price': price.text.strip(' - $').replace(',', ''),
+                    'featured_product': False,
                     'url': actual_url,
                     'image_url' : image_url,
+                    'store_id': self.store_id,
                     'store_icon': store_icon,
                     'product_id': dealio_id
                 }
 
-                # jaspearson's attempt to save records to the mysql database.
-                # Will continue work on this part later. Commenting out for now.
-                """r = Deal(url="http://walmart.com" + url.get("href"),
-                         image_url=image_url, title=title.text,
-                         price=Decimal(price.text.strip(' - $')),
-                         featured_product=False,
-                         store_id=self.store_id,
-                         product_id=dealio_id)
-
-                r.save()
-                """
                 # Append each new product and attributes to the dictionary object
                 extracted_records.append(record)
 
         # Return the extracted records to the calling program
         return extracted_records
+
 
 
