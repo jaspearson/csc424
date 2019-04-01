@@ -7,8 +7,9 @@ from Classes.walmartScraper import Walmart
 def index(request):
 	deals = my_test
 	return render(request, 'index.html', {'deals': my_test})
-	return render(request, 'terms.html', {})
 
+def terms(request):
+	return render(request, 'terms.html', {})
 
 
 def deal(request):
