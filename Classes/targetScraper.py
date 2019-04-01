@@ -13,7 +13,7 @@ class Target():
         url = "https://www.target.com/s?searchTerm=tv"
 
         # Make the request
-        the_request = requests.get(url + this_keyword)
+        the_request = requests.get(url + this_keyword + "&type=Search")
 
         # Parse the request
         soup = BeautifulSoup(the_request.text, 'html.parser')
