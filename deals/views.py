@@ -7,9 +7,12 @@ from Classes.walmartScraper import Walmart
 
 # Create your views here.
 def index(request):
+
 	#deals = my_test
 	return render(request, 'index.html', {})
 
+def terms(request):
+	return render(request, 'terms.html', {})
 
 def deal(request):
 	return HttpResponse("I am a single deal page...")
