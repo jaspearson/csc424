@@ -6,34 +6,7 @@ class Target():
     def __init__(self):
         print("The Target class was initialized.")
 
-    ##url = 'https://www.target.com/s?searchTerm=tv'
 
-        #the_request = requests.get(url)
-
-        #soup = BeautifulSoup(the_request.text, 'html.parser')
-
-
-
-        #extracted_records = []
-
-
-        #for product in products:
-
-            #title = product.find("a", class_="flex-grow-one styles__StyledTitleLink-sc-14k8w5n-5").text
-            #price = product.find("span", class_="styles__StyledPricePromoWrapper-sc-14k8w5n-13").text
-            #url = "https://www.target.com/" + product.find("a", class_="flex-grow-one styles__StyledTitleLink-sc-14k8w5n-5").get('href')
-
-            #print("%s - %s" % (title, price))
-            #record = {
-                    #'title': title,
-                    #'price': price,
-                   # 'url': url
-            #}
-            # Append each new product and attributes to the dictionary object
-            #extracted_records.append(record)
-
-        # Return the extracted records to the calling program
-        #return extracted_records
 
 
     def get_deals(self,this_keyword):
