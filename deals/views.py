@@ -8,6 +8,9 @@ def index(request):
 	deals = my_test
 	return render(request, 'index.html', {'deals': my_test})
 
+def terms(request):
+	return render(request, 'terms.html', {})
+
 
 def deal(request):
 	return HttpResponse("I am a single deal page...")
