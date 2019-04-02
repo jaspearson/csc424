@@ -29,6 +29,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^search/$', search, name="search"),
     url(r'^error/$', error, name="error"),
-    url(r'^terms/$', terms.as_view, name="terms")
+    url(r'^terms/$', terms, name="terms")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
               + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
