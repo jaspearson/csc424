@@ -2,21 +2,25 @@
 {% load static %}
 {% block content %}
 
-    <div class="container">
+    <div class="container" >
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" >
 
             </div>
 
             {%  for deal in deals %}
-                <div class="col-md-4">
+                <div class="col-md-4" >
                     <div class="card h-100" style="width: 15rem;">
 
                         <div class="card-body h-100 search-card-body">
                             <img class="img-fluid" src="{{ deal.image_url }}" />
-                            <a href="{{ deal.url }}" target="_blank" ><h6>{{ deal.title }}</h6></a>
-                            <p class="card-text"> <b>Price: {{ deal.price }} </b></p>
-                            <img class="float-right" src= "{%  static deal.store_icon %}" style="width: 30px; height: 30px;"/>
+                            <div class="text-capitalize">
+                                <a href="{{ deal.url }}" class="text-secondary text-decoration-none" target="_blank" ><h6>{{ deal.title }}</h6></a>
+                            </div>
+                            <div class="card-text position-relative float-left"> <b>Price: {{ deal.price }} </b></div>
+                            <div class="position-relative float-right rounded-circle">
+                                <img class= "mg-fluid rounded-circle" src= "{%  static deal.store_icon %}" style="width: 50px; height: 50px;"/>
+                            </div>
                         </div>
 
 
