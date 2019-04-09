@@ -68,9 +68,11 @@ class Walmart():
                 product_id = split_url[product_id_element]
 
                 # if it has a question mark in it split it again.
+                #print("before: " + product_id)
                 if "?" in product_id:
                     product_id_array = product_id.split('?')
-                    product_id = product_id[0]
+                    product_id = product_id_array[0]
+                    #print("after: " + product_id)
 
                 # dealio_id will be the store_id - product_id
                 # Example: 1-19758129
@@ -100,4 +102,4 @@ class Walmart():
         return extracted_records
 
 
-
+Walmart().get_deals('phone')
