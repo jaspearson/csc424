@@ -102,4 +102,4 @@ class Walmart():
         return extracted_records
 
 
-Walmart().get_deals('phone')
+#Walmart().get_deals('phone')
