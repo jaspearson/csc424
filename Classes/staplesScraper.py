@@ -15,7 +15,7 @@ class Staples():
 
 	def __init__(self):
 		self.store_id = 10
-		self.base_url = "https://www.staples.com/"
+		self.base_url = "https://www.staples.com"
 		self.url = "https://www.staples.com/%replaceME%/directory_%replaceME%?"
 		print("The Staples class was initialized.")
 
