@@ -67,9 +67,17 @@ class Walmart():
                 # Get the product_id
                 product_id = split_url[product_id_element]
 
+                # if it has a question mark in it split it again.
+                if "?" in product_id:
+                    product_id_array = product_id.split('?')
+                    product_id = product_id[0]
+
                 # dealio_id will be the store_id - product_id
                 # Example: 1-19758129
                 dealio_id = str(self.store_id) + "-" + product_id
+
+
+
 
                 print("%s - %s, %s" % (title.text, price.text.strip(' - $'), dealio_id))
 
