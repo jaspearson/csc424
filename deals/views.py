@@ -14,6 +14,12 @@ def index(request):
 def terms(request):
 	return render(request, 'terms.html', {})
 
+def helppage(request):
+	return render(request, 'help.html', {})
+
+def privacypolicy(request):
+	return render(request, 'privacy_policy.html', {})
+
 def deal(request):
 	return HttpResponse("I am a single deal page...")
 

@@ -22,6 +22,8 @@ from django.conf.urls.static import static
 from deals.views import search
 from deals.views import custom_error
 from deals.views import terms
+from deals.views import helppage
+from deals.views import privacypolicy
 
 urlpatterns = [
     url(r'^deal/(.*)$', deal_view.deal),
@@ -29,6 +31,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^search/$', search, name="search"),
     url(r'^error/$', custom_error, name="error"),
-	url(r'^terms/$', terms, name="terms")
+    url(r'^terms/$', terms, name="terms"),
+    url(r'^helppage/$', helppage, name="help"),
+    url(r'^privacypolicy/$', privacypolicy, name="privacy_policy")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
               + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
