@@ -14,10 +14,10 @@ def index(request):
 def terms(request):
 	return render(request, 'terms.html', {})
 
-def helppage(request):
-	return render(request, 'help.html', {})
+def help_page(request):
+	return render(request, 'help_page.html', {})
 
-def privacypolicy(request):
+def privacy_policy(request):
 	return render(request, 'privacy_policy.html', {})
 
 def deal(request):
