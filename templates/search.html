@@ -10,16 +10,33 @@
 
             {%  for deal in deals %}
                 <div class="col-md-4" >
-                    <div class="card h-100" style="width: 15rem;">
+                    <div class="card h-100" style="width: 17rem;">
 
-                        <div class="card-body h-100 search-card-body">
-                            <img class="img-fluid" src="{{ deal.image_url }}" />
-                            <div class="text-capitalize">
-                                <a href="{{ deal.url }}" class="text-secondary text-decoration-none" target="_blank" ><h6>{{ deal.title }}</h6></a>
+                        <div class="card-body search-card-body d-flex flex-column justify-content-between">
+                            <!--Display the Product Image -->
+                            <div class="product-image-wrapper text-center">
+                                <img class="img-fluid p-1" src="{{ deal.image_url }}" style="max-height: 170px; max-width: 170px;"/>
                             </div>
-                            <div class="card-text position-relative float-left"> <b>Price: {{ deal.price }} </b></div>
-                            <div class="position-relative float-right rounded-circle">
-                                <img class= "mg-fluid rounded-circle" src= "{%  static deal.store_icon %}" style="width: 50px; height: 50px;"/>
+
+                            <!--Display the Title and hyperlink to the product -->
+
+                            <div class="text-capitalize p-1" >
+                               <a href="{{ deal.url }}" class="card-title text-secondary text-decoration-none" target="_blank" >
+                                   <!--Truncate the product title so that it will fit in the card -->
+                                   <h6>{{ deal.title| truncatechars:50 }}</h6>
+                               </a>
+                            </div>
+
+                            <!--Display the price and Store Logo -->
+                            <div id="price-logo-container" class="p-1 d-flex flex-row align-bottom justify-content-between">
+
+                                <!-- Price -->
+                                <div class="card-text align-self-center float-left"> <b>Price: {{ deal.price }} </b></div>
+
+                                <!--Store Logo -->
+                                <div class="rounded-circle align-self-end float-right">
+                                    <img class= "mg-fluid rounded-circle" src= "{%  static deal.store_icon %}" style="width: 50px; height: 50px;"/>
+                                </div>
                             </div>
                         </div>
 
