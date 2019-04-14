@@ -24,6 +24,8 @@ from deals.views import custom_error
 from deals.views import terms
 from deals.views import help_page
 from deals.views import privacy_policy
+from deals.views import about_us
+from deals.views import contact_us
 
 urlpatterns = [
     url(r'^deal/(.*)$', deal_view.deal),
@@ -33,6 +35,8 @@ urlpatterns = [
     url(r'^error/$', custom_error, name="error"),
     url(r'^terms/$', terms, name="terms"),
     url(r'^help_page/$', help_page, name="help_page"),
-    url(r'^privacy_policy/$', privacy_policy, name="privacy_policy")
+    url(r'^privacy_policy/$', privacy_policy, name="privacy_policy"),
+    url(r'^about_us/$', about_us, name="about_us"),
+    url(r'^contact_us/$', contact_us, name="contact_us")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
               + static(settings.STATIC_URL, document_root=settings.STATIC_URL)

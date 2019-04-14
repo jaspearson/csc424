@@ -5,7 +5,7 @@ class OfficeDepot():
     def __init__(self):
         print("The class is ready")
 
-    def get_value(self, new_search):
+    def get_info(self, new_search):
         url = "https://www.officedepot.com/a/browse/tvs/N=5+509465/?hijack= "
         new_request = requests.get(url + new_search + "&type=Search")
         soup = BeautifulSoup(new_request.text, 'html.parser')

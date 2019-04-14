@@ -21,6 +21,12 @@ def help_page(request):
 def privacy_policy(request):
 	return render(request, 'privacy_policy.html', {})
 
+def about_us(request):
+	return render(request, 'about_us.html', {})
+
+def contact_us(request):
+	return render(request, 'contact_us.html', {})
+
 def deal(request):
 	return HttpResponse("I am a single deal page...")
 
