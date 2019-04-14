@@ -1,32 +1,108 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
-            </div>
-
-            {%  for deal in deals %}
-                <div class="col-md-4">
-                    <div class="card h-100" style="width: 15rem;">
-
-                        <div class="card-body h-100">
-                            <img src="{{ deal.image_url }}"/>
-                            <a href="{{ deal.url }}" target="_blank" ><h6>{{ deal.title }}</h6></a>
-                            <p class="card-text"> <b>Price: {{ deal.price }} </b></p>
-
+    <!-- image carousel 6 items -->
+    <div id="carousel-base" class="container">
+        <div class="overlay d-block"><h3>Dealios for<mark class="red">You</mark></h3></div><br/>
+        <div class="d-block justify-content-center">
+            <div id="image-carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#image-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#image-carousel" data-slide-to="1"></li>
+                    <li data-target="#image-carousel" data-slide-to="2"></li>
+                    <li data-target="#image-carousel" data-slide-to="3"></li>
+                    <li data-target="#image-carousel" data-slide-to="4"></li>
+                    <li data-target="#image-carousel" data-slide-to="5"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="First Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Computers 50% Less than our competitors</p>
                         </div>
-
-
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Second Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Lightbulbs super cheap I swear they are not broken</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/825258/pexels-photo-825258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Third Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Motherboards so inexpensive you would think they are fried</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/712786/pexels-photo-712786.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Fourth Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Magic Zoom Glass not creepy at all</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Fifth Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Keyboard that makes life look like a photo filter</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="d-block w-100" alt="Sixth Personalized Product">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p>Headsets to block out all your haters</p>
+                        </div>
                     </div>
                 </div>
-
-
-            {% endfor %}
+                <a class="carousel-control-prev" href="#image-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#image-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-
+        </div>
     </div>
 
-    {% csrf_token %}
+    <br/>
+
+    <!-- hot deals cards 3-->
+
+    <div id="card-table" class="container">
+        <div class="overlay d-flex"><h3>Featured<mark class="red"> Hot </mark>Dealios</h3></div><br/>
+        <div class="card-deck">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="First Hot Deal">
+                <div class="card-body">
+                    <h5 class="card-title">Cool Blue Stuff</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="Second Hot Deal">
+                <div class="card-body">
+                    <h5 class="card-title">A Lot of Red Things</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 6 days ago</small>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=1260" class="card-img-top" alt="Third Hot Deal">
+                <div class="card-body">
+                    <h5 class="card-title">Big Fancy Plates</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 9 weeks ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
