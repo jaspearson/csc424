@@ -82,3 +82,6 @@ def search(requests):
 
 def custom_error(requests, the_errors):
 	return render(requests, 'error.html', {'error': the_errors})
+
+def terms(request):
+	return render(request, 'terms.html', {})
