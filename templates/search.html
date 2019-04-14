@@ -2,30 +2,95 @@
 {% load static %}
 {% block content %}
 
-    <div class="container">
+    <div class="container" >
         <div class="row">
-            <div class="col-md-12">
+            <div class="col">
+                <div class="row">
+                    {%  for deal in deals %}
+                        <div class="col-md-4" >
+                            <div class="card h-100" style="width: 17rem;">
 
-            </div>
+                                <div class="card-body search-card-body d-flex flex-column justify-content-between">
+                                    <!--Display the Product Image -->
+                                    <div class="product-image-wrapper text-center">
+                                        <img class="img-fluid p-1" src="{{ deal.image_url }}" style="max-height: 170px; max-width: 170px;"/>
+                                    </div>
 
-            {%  for deal in deals %}
-                <div class="col-md-4">
-                    <div class="card h-100" style="width: 15rem;">
+                                    <!--Display the Title and hyperlink to the product -->
 
-                        <div class="card-body h-100 search-card-body">
-                            <img class="img-fluid" src="{{ deal.image_url }}" />
-                            <a href="{{ deal.url }}" target="_blank" ><h6>{{ deal.title }}</h6></a>
-                            <p class="card-text"> <b>Price: {{ deal.price }} </b></p>
-                            <img class="float-right" src= "{%  static deal.store_icon %}" style="width: 30px; height: 30px;"/>
+                                    <div class="text-capitalize p-1" >
+                                       <a href="{{ deal.url }}" class="card-title text-secondary text-decoration-none" target="_blank" >
+                                           <!--Truncate the product title so that it will fit in the card -->
+                                           <h6>{{ deal.title| truncatechars:50 }}</h6>
+                                       </a>
+                                    </div>
+
+                                    <!--Display the price and Store Logo -->
+                                    <div id="price-logo-container" class="p-1 d-flex flex-row align-bottom justify-content-between">
+
+                                        <!-- Price -->
+                                        <div class="card-text align-self-center float-left"> <b>Price: {{ deal.price }} </b></div>
+
+                                        <!--Store Logo -->
+                                        <div class="rounded-circle align-self-end float-right">
+                                            <img class= "mg-fluid rounded-circle" src= "{%  static deal.store_icon %}" style="width: 50px; height: 50px;"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
                         </div>
 
 
-                    </div>
+                    {% endfor %}
                 </div>
-
-
-            {% endfor %}
             </div>
+            <div class="col-md-1">
+                <div class="col-lg-5" id="filter-pane">
+                <form id="nav-search" method="GET" action="{% url 'search' %}">
+                    <div class ="card-body filter-container" id="price-container">
+                        <a data-toggle="collapse" href="#FilterCollapse" class="text-light text-decoration-none" role="button" aria-expanded="true" aria-controls="collapseExample">
+                            <b>Filters</b>
+                        </a>
+                        </br>
+                            <input class="form-control mr-sm-2 d-none" type="search" results=6 placeholder="What's the Dealio?" name="Search" value ="{{ request.GET.Search }}">
+
+                            <div class="collapse p-2" id="FilterCollapse">
+                                <br/>
+
+                                <!--Price Checkboxes -->
+                                <b class="text-light text-decoration-none">Price</b>
+                                <br/>
+                                <input class="form-check-input" type="checkbox" value="0-100" name="PriceFilter" id="priceFilter1">
+                                <label class="form-check-label" for="priceFilter1">$0 - $100 </label>
+                                <br/>
+                                <input class="form-check-input" type="checkbox" value="100-200" name="PriceFilter" id="priceFilter2">
+                                <label class="form-check-label" for="priceFilter2">$100 - $200 </label>
+                                <br />
+                                <input class="form-check-input" type="checkbox" value="200-250" name="PriceFilter" id="priceFilter3">
+                                <label class="form-check-label" for="priceFilter3">$200 - $250 </label>
+                                <br/>
+                                <input class="form-check-input" type="checkbox" value="250-300" name="PriceFilter" id="priceFilter4">
+                                <label class="form-check-label" for="priceFilter4">$250 - $300 </label>
+                                <br/>
+                                <input class="form-check-input" type="checkbox" value="300-350" name="PriceFilter" id="priceFilter5">
+                                <label class="form-check-label" for="priceFilter5">$300 - $350 </label>
+                                <br/>
+                                <input class="form-check-input" type="checkbox" value="350-400" name="PriceFilter" id="priceFilter6">
+                                <label class="form-check-label" for="priceFilter6">$350 - $400 </label>
+                                <br/>
+                                <input class="form-check-input" type="checkbox" value="400" name="PriceFilter" id="priceFilter7">
+                                <label class="form-check-label" for="priceFilter7">$400+ </label>
+                                <br/>
+                                <br/>
+                                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Filter</button>
+                            </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
 
     </div>
 

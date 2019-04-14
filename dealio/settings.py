@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from dealio import secret_settings
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,9 +19,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+# Moved the actual key to the secret_settings.py file (NOT TO BE PUT ON GITHUB!!)
+# See jaspearson for the secret_settings.py file.
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-jk*lv(8d09o#sugvky)0*o$r&8k(z(7s$034alyckv)x+px%('
+SECRET_KEY = secret_settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,14 +77,10 @@ WSGI_APPLICATION = 'dealio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
+# Moved the database settings to the secret_settings.py file (NOT TO BE PUT ON GITHUB!!)
+# See jaspearson for the secret_settings.py file.
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
+DATABASES = secret_settings.DATABASES
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

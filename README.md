@@ -4,7 +4,7 @@
 * Python 3.7.
 * Django 2.1.7
 * Pycharm 2018.3.4
-
+* mysql-python-connector 8.0.12
 
 ###Project Structure
 

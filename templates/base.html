@@ -27,7 +27,7 @@
    <!-- Nav bar min md down full lg up -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-danger">
         <div class= "rounded-pill" style="background-color:white">
-        <a class="navbar-brand" href = "images/dealio-icon.png">
+        <a class="navbar-brand" href = "/">
             <img src = "{% static 'images/dealio-icon.png' %}" alt = "Dealio Logo" style="width:100px;height:51px;">
         </a>
             </div>
@@ -142,7 +142,7 @@
 
     <footer class="container d-flex justify-content-center">
         <div>
-            <p><a class="foot-links" href="about_us.html">About Us</a> | <a class="foot-links" href="contact_us.html">Contact Us</a> | <a class="foot-links" href="help.html">Help</a> | <a class="foot-links" href="privacy_policy.html">Privacy Policy</a> | <a class="foot-links" href="terms.html">Terms of Service</a></p>
+            <p><a class="foot-links" href="about_us.html">About Us</a> | <a class="foot-links" href="contact_us.html">Contact Us</a> | <a class="foot-links" href="{%  url 'help_page' %}">Help</a> | <a class="foot-links" href="{% url 'privacy_policy' %}">Privacy Policy</a> | <a class="foot-links" href="terms.html">Terms of Service</a></p>
         </div>
     </footer>
 
