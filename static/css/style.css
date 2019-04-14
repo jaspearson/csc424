@@ -36,15 +36,15 @@ a.navbar-brand, .nav-link
     //float: left;
     //width: 20%;
     //height: 100%;
-    border-right: 1px #ebe9e9 solid;
-    border-top: 1px #ebe9e9 solid;
-    border-bottom: 1px #ebe9e9 solid;
+    //border-left: 1px #ebe9e9 solid;
+    //border-top: 1px #ebe9e9 solid;
+    //border-bottom: 1px #ebe9e9 solid;
     padding-right: 5px;
 
 }
 .filter-container
 {
-    width: 140px;
+    width: 160px;
 }
 #content
 {
