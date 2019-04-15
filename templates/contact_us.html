@@ -1,29 +1,16 @@
 {%extends 'base.html'%}
     {%block content%}
         <p></p>
+        <div id="Space"></div>
         <div id = "centerDiv" align = center>
-            <div class="container">
+            <div class="anotherTextContainer">
                 <h1>Contact Us</h1>
-                <form action = "action_page.php">
-                    <label for="first_name">First Name: </label>
-    <input type="text" id="first_name" name="firstname" placeholder="First name..">
-      <p></p>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
 
-    <label for="last_name">Last Name: </label>
-    <input type="text" id="last_name" name="lastname" placeholder="Last name..">
-      <p></p>
-
-    <label for="email">Your Email: </label>
-     <input type="text" id="email" name="lastname" placeholder="Email Address..">
-      <p></p>
-
-    <label for="subject">Subject: </label>
-    <textarea id="subject" name="subject" placeholder="Message.." style="width:300px; height:150px"></textarea>
-      <p></p>
-
-    <input type="submit" value="Submit">
-
-  </form>
 </div>
 </div>
         {% csrf_token %}

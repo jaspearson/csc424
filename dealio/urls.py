@@ -21,7 +21,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from deals.views import search
 from deals.views import custom_error
-from deals.views import terms
 from deals.views import help_page
 from deals.views import privacy_policy
 from deals.views import about_us
@@ -39,6 +38,5 @@ urlpatterns = [
     url(r'^privacy_policy/$', privacy_policy, name="privacy_policy"),
     url(r'^about_us/$', about_us, name="about_us"),
     url(r'^contact_us/$', contact_us, name="contact_us"),
-    url(r'^terms/$', terms, name="terms")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) \
               + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
