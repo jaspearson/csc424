@@ -10,10 +10,12 @@ from Classes.walmartScraper import Walmart
 from django.core.mail import send_mail
 
 # Create your views here.
-def index(request):
+def index(requests):
+	q1 = Deal.objects.filter(Q(featured_product=True))
+	print(q1)
 
 	#deals = my_test
-	return render(request, 'index.html', {})
+	return render(requests, 'index.html', {'deals': q1})
 
 def terms(request):
 	return render(request, 'terms.html', {})

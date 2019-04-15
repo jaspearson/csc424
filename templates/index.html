@@ -72,37 +72,22 @@
     <div id="card-table" class="container">
         <div class="overlay d-flex"><h3>Featured<mark class="red"> Hot </mark>Dealios</h3></div><br/>
         <div class="card-deck">
+            {%  for deal in deals %}
             <div class="card">
-                <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="First Hot Deal">
+                <img src="{{ deal.image_url }}" class="card-img-top" alt="First Hot Deal">
                 <div class="card-body">
-                    <h5 class="card-title">Cool Blue Stuff</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <a href="{{ deal.url }}" class="card-title text-light text-decoration-none" target="_blank" >
+                        <h5 class="card-title">{{ deal.title| truncatechars:50 }}</h5>
+                    </a>
+                    <p class="card-text">Price: Price: {{ deal.price }}</p>
+
                 </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
+
             </div>
-            <div class="card">
-                <img src="https://images.pexels.com/photos/158826/structure-light-led-movement-158826.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="card-img-top" alt="Second Hot Deal">
-                <div class="card-body">
-                    <h5 class="card-title">A Lot of Red Things</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 6 days ago</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=1260" class="card-img-top" alt="Third Hot Deal">
-                <div class="card-body">
-                    <h5 class="card-title">Big Fancy Plates</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 9 weeks ago</small>
-                </div>
-            </div>
-        </div>
+            {% endfor %}
+
+
+
     </div>
 
 {% endblock %}
