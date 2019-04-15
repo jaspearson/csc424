@@ -91,7 +91,7 @@ def search(requests):
 				return custom_error(requests, 'No results matched the search criteria...')
 		except Deal.DoesNotExist:
 
-			return render(requests, 'error.html', 'Opps...Something went wrong with your search.')
+			return render(requests, 'error.html', 'Oops...Something went wrong with your search.')
 
 	else:
 
