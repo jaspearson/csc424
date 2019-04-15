@@ -36,7 +36,7 @@ def contact_us(request):
 
 			message = "{0} has sent you a new message:\n\n{1}".format(sender_name, form.cleaned_data['message'])
 			send_mail('Contact Us Form', message, sender_email, ['csc424thedealers@gmail.com'])
-			return HttpResponse('Thank you for contacting us!')
+			return custom_error(request, 'Thank you for contacting us!')
 
 	else:
 		form = ContactForm()
