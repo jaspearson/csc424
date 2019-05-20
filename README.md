@@ -1,4 +1,12 @@
-# csc424 - Dealio
+# USM CSC - 424 - Dealio
+
+## Product Vision
+For online shoppers who are always on the hunt for the best online deals, the What’s the Dealio web application will be an interactive, user-friendly resource that provides price comparison and a deal finder to search the world wide web for the best pricing and discounts of coveted products. Unlike typical online deals or coupons, our product provides a user account and involves data extraction from far reaches of the web in order to analyze and compile pricing data across websites that list the desired product and notify the user of any price change, which supports our strategy to provide the best deals for our users by focusing on their desired items.
+
+## Screen Shots
+<HTML>
+    <img class='border border-warning' src="readme-images/search-screen.png" alt='search screen image'/>  <img src='readme-images/featured-hot-deals.png' alt='Featured Hot Deals'/>
+</HTML>
 
 ## Required installs
 * Python 3.7.

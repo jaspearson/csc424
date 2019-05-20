@@ -37,8 +37,8 @@
         <div class="collapse navbar-collapse" id="navbarToggle">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0 align-items-center">
                 <li>
-                    <form id="menu-search" class="form-inline my-2 my-lg-0 d-lg-none">
-                        <input class="form-control mr-sm-2" type="search" results=5 placeholder="What's the Dealio?">
+                    <form id="menu-search" class="form-inline my-2 my-lg-0 d-lg-none" method="GET" action="{% url 'search' %}">
+                        <input class="form-control mr-sm-2" type="search" results=5 placeholder="What's the Dealio?" name="Search" value ="{{ request.GET.search }}">
                         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
                     </form>
                 </li>
