@@ -5,7 +5,7 @@ For online shoppers who are always on the hunt for the best online deals, the Wh
 
 ## Screen Shots
 <HTML>
-    <img class='border border-warning' src="readme-images/search-screen.png" alt='search screen image' style="max-width:500px;"/>  <img src='readme-images/featured-hot-deals.png' alt='Featured Hot Deals' style="max-width:500px;"/>
+    <img class='border border-warning' src="readme-images/search-screen.png" alt='search screen image' width="500"/>  <img src='readme-images/featured-hot-deals.png' alt='Featured Hot Deals' width="500"/>
 </HTML>
 
 ## Required installs
